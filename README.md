@@ -131,7 +131,7 @@ Para colocar una imagen el proceso será similar al de los enlaces, pero el enla
 ```
 
 Un ejemplo de imagen:
-![Raphinha](URL "Raphinha")
+![Raphinha](https://github.com/AriamSS/0373_A01_DocumentacionApuntes_SanchezAriam/blob/main/R11.jpg?raw=true "Raphinha")
 
 ## 2.6 Tablas
 Para comenzar a crear la tabla, debemos empezar por los respectivos títulos de cada columna. Cada columna de la tabla se dividirá por el siguiente símbolo "|", de manera que la primera fila quedará asi:
