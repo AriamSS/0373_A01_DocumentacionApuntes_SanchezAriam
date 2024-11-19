@@ -225,7 +225,7 @@ En esta etiqueta se puede ver la dirección o ubicación de la imagen y un texto
 - El nombre del atributo irá seguido por un signo igual (=).
 - Comillas de apertura y de cierre, encerrando el valor del propio atributo.
 
-# 3.3 Estructura básica de un fichero HTML
+## 3.3 Estructura básica de un fichero HTML
 Un documento de HTML sigue una estructura básica, la cuál se puede implementar ejecutando **HTML 5** dentro del mismo documento. Una vez ejecutado quedaria de la siguiente manera:
 
 ```
@@ -250,7 +250,7 @@ Cada una de las etiquetas tiene un signficado:
 - ``<title></title>``: Indica el titulo de la pagina web que aparece al abrir las pestaña en el navegador.
 - ``<body></body>``: Muestra el contenido visible en la página web, todo lo que queremos crear y mostrar.
 
-# 3.4 Etiquetas
+## 3.4 Etiquetas
 
 ### 3.4.1 Tipos de etiquetas
 Las etiquetas se pueden clasificar en 2 tipos de elemento:
@@ -368,3 +368,65 @@ La validación del código es el proceso a través del cuál verificamos que nue
 El validador --> [W3C: Validador de HTML](https://validator.w3.org "Validador de HTML W3C")
 
 ## 3.6 Formularios 
+Los formularios nos sirven como herramienta para crear una interacción con el usuario, de manera que este pueda transmitirnos información o datos sobre el mismo usuario para ser procesados posteriormente.
+
+# 3.6.1 Etiquetas de formularios
+``<input>``: Se utiliza para crear diferentes campos interactivos en un formulario y recibir datos del usuario. Los atributos comunes de esta etiqueta son:
+
+- type: Define el tipo de entrada a mostrar. Ejemplos: text, password, radio, checkbox...
+- id: Identificador único para el campo. 
+- name: Nombre del campo de entrada.
+- value: Valor predeterminado del campo de entrada.
+- placeholder: Texto que aparece en el campo cuando este se encuentra vacio.
+- required: Indica que el campo debe completarse antes de enviar el formulario.
+- disabled: Desactiva el campo, prohibiendo que el usuario pueda interactuar con él.
+- readonly: Hace que el campo sea únicamente de lectura, evitando que pueda modificarse su contenido.
+
+``<form>``: Se utiliza para crear formularios que permiten enviar datos a un servidor. Algunos atributos comunes son:
+
+  - action: Define la URL donde se enviarán los datos del formulario para su procesamiento. Es el destino o la dirección a la que apunta el formulario.
+  - method: Define el método de envio de los datos.
+  - enctype: Define la manera de codificar los datos previamente a enviarlos. Utilizado cuando se suben archivos.
+  - target: Indica dónde se visualizará la respuesta al enviar el formulario. Tenemos el **_self**, que provoca que la respuesta al formulario cargue en la misma ventana. Por otro lado, tenemos el **_blank**, que a diferencia del anterior abre una nueva ventana para mostrar la respuesta. 
+
+``<input type>``:
+- "radio": Botón de opción. Se agrupa con otros de mismo nombre.
+- "checkbox": Casilla de verificación. Permite selecciones múltiples.
+
+``<textarea>``: Crea un área de texto en la que los usuarios pueden ingresar multiples líneas de texto. Muy útil para mensajes largos y descripciones detalladas. Atributos comunes:
+- id: Identificador único para el campo. 
+- name: Nombre del campo de entrada.
+- rows: Define el número de filas visibles en el área de texto. 
+- cols: Define el número de columnas visibles en el área de texto.
+- placeholder: Texto que aparece en el campo cuando este se encuentra vacio.
+- required: Indica que el campo debe completarse antes de enviar el formulario.
+- disabled: Desactiva el campo, prohibiendo que el usuario pueda interactuar con él.
+- readonly: Hace que el campo sea únicamente de lectura, evitando que pueda modificarse su contenido.
+
+``<label>``: Agrega una etiqueta o descripción para un elemento de formulario, como un campo de entrada o una opción en un menú desplegable. Es útil para mejorar la accesibilidad y la usabilidad del formulario. Sus atributos son:
+- for: Especifica a qué elemento está asociado el <label>.
+- form: Permite asociar la etiqueta con un formulario específico si hay varios formularios en la página.
+
+```<select>```: Utillizado para crear el contenedor de un menú desplegable. Permite al usuario la selección de una única opción dentro de una lista de opciones. Sus atributos comunes son:
+- id: Identificador único para el campo. 
+- name: Nombre del campo de entrada.
+- size: Define el número de opciones visibles directamente en la lista desplegable 
+- multiple: Permite seleccionar varias opciones al mismo tiempo en una lista. 
+- value: Valor predeterminado del campo de entrada.
+
+```<option>```: Define las opciones del menú. En ocasiones, incluye el atributo ``disabled``, que sirve para deshabilitar opciones de la lista.
+
+```<fieldset>```: Utilizado para agrupar diversos elementos relacionados en un formulario, creando un bloque lógico y mejorando la estructura y legibilidad del formulario. Algunos atributos comunes:
+- name: Nombre del campo de entrada.
+- disabled: Desactiva el campo, prohibiendo que el usuario pueda interactuar con él.
+- form: Permite asociar la etiqueta con un formulario específico si hay varios formularios en la página.
+  
+```<legend>```: Proporciona un título para un grupo de elementos.
+
+```<button>```: Utilizado para definir varios tipos de botones interactivos en una página web. Normalmente estos botones sirven para el envio de formularios. Algunos de los atributos comunes son:
+- type: Define el tipo de entrada a mostrar. Ejemplos: text, password, radio, checkbox...
+- submit: Tiene como única función enviar el formulario. 
+- reset: Restablece los campos de un formulario a sus valores iniciales. 
+- name: Nombre del campo de entrada.
+- value: Valor predeterminado del campo de entrada.
+- disabled: Desactiva el campo, prohibiendo que el usuario pueda interactuar con él.
