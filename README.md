@@ -206,10 +206,10 @@ Etiqueta de cierre: </p>
 ```
 
 **NORMAS BÁSICAS DE ETIQUETAS HTML**:
-- Las etiquetas HTML suelen venir en pares, con una etiqueta de apertura y una de cierre, como por ejemplo <p> y </p>. 
-- Algunas etiquetas, conocidas como etiquetas vacias, no tienen una etiqueta de cierre. Algunas son: <img>, <br>...
-- Las etiquetas HTML deben anidarse correctamente. Por ejemplo, si una etiqueta <b> se abre dentro de una etiqueta <p>, debe cerrarse la etiqueta <b> antes de que se cierre la etiqueta <p> para poder leer el código corréctamente. 
-- Los atributos de las etiquetas se especifican en la etiqueta de apertura y suelen tener el formato nombre "valor". Por ejemplo, en <img sre imagen.jpg>, "src" es un atributo que especifica la ubicación de la imagen.
+- Las etiquetas HTML suelen venir en pares, con una etiqueta de apertura y una de cierre, como por ejemplo ``<p>`` y ``</p>``. 
+- Algunas etiquetas, conocidas como etiquetas vacias, no tienen una etiqueta de cierre. Algunas son: ``<img>``, ``<br>``...
+- Las etiquetas HTML deben anidarse correctamente. Por ejemplo, si una etiqueta ``<b>`` se abre dentro de una etiqueta ``<p>``, debe cerrarse la etiqueta ``<b>`` antes de que se cierre la etiqueta ``<p>`` para poder leer el código corréctamente. 
+- Los atributos de las etiquetas se especifican en la etiqueta de apertura y suelen tener el formato nombre "valor". Por ejemplo, en ``<img sre imagen.jpg>``, "src" es un atributo que especifica la ubicación de la imagen.
   
 ### 3.2.2 ¿Que son los atributos?
 Los atributos buscan dar información extra a una etiqueta, dando detalles como por ejemplo:
@@ -243,12 +243,12 @@ Un documento de HTML sigue una estructura básica, la cuál se puede implementar
 ```
 
 Cada una de las etiquetas tiene un signficado:
-- <!DOCTYPE html>: Define el tipo de documento, que seria HTML 5.
-- <html></html>: Contenedor principal del documento HTML.
-- <head></head>: Contiene informacion adicional sobre el documento, la cual no se muestra en la página web.
-- <meta></meta>: Proporciona metadatos, los cuáles son datos sobre los datos de la página y no son visibles directamente para los usuarios, pero son importantes para los navegadores en los que visualizamos nuestra página web.
-- <title></title>: Indica el titulo de la pagina web que aparece al abrir las pestaña en el navegador.
-- <body></body>: Muestra el contenido visible en la página web, todo lo que queremos crear y mostrar.
+- ``<!DOCTYPE html>``: Define el tipo de documento, que seria HTML 5.
+- ``<html></html>``: Contenedor principal del documento HTML.
+- ``<head></head>``: Contiene informacion adicional sobre el documento, la cual no se muestra en la página web.
+- ``<meta></meta>``: Proporciona metadatos, los cuáles son datos sobre los datos de la página y no son visibles directamente para los usuarios, pero son importantes para los navegadores en los que visualizamos nuestra página web.
+- ``<title></title>``: Indica el titulo de la pagina web que aparece al abrir las pestaña en el navegador.
+- ``<body></body>``: Muestra el contenido visible en la página web, todo lo que queremos crear y mostrar.
 
 # 3.4 Etiquetas
 
@@ -295,21 +295,21 @@ La etiqueta utilizada en HTML para la creación de enlaces es <a>. Esta etiqueta
 En estos códigos, el atributo **href** nos indica la dirección del enlace. 
 
 #### Imágenes
-Uno de los recursos más utilizados en páginas web. Las imágenes proporcionan informacion de manera visual, lo que da soporte a nuestra página web y mejora la estética de la misma. La etiqueta utilizada para insertar una imagen es <img>, etiqueta que no tiene tiene cierre, es decir, se cierra en sí misma. Un ejemplo de uso:
+Uno de los recursos más utilizados en páginas web. Las imágenes proporcionan informacion de manera visual, lo que da soporte a nuestra página web y mejora la estética de la misma. La etiqueta utilizada para insertar una imagen es ``<img>``, etiqueta que no tiene tiene cierre, es decir, se cierra en sí misma. Un ejemplo de uso:
 
 ```
 <img src="imagen.png" alt="Imagen principal de la página web" width="120" height="120">
 ```
 
 Donde:
-<src> --> Atributo que especifica la ubicación de la imagen.
-<alt> --> Proporciona un texto alternativo para la imagen.
-<width> / <height> --> Modifica las medidas de la imagen; altura y anchura.
+``<src>`` --> Atributo que especifica la ubicación de la imagen.
+``<alt>`` --> Proporciona un texto alternativo para la imagen.
+``<width> / <height>`` --> Modifica las medidas de la imagen; altura y anchura.
 
 #### Listas
-La listas nos sirven para enumerar ciertos conceptos o desarrollos de texto, como pueden ser unas instrucciones, un indice u otros. Cada elemento de una lista debe colocarse dentro de un elemento <li>. Pueden haber dos tipos de lista:
+La listas nos sirven para enumerar ciertos conceptos o desarrollos de texto, como pueden ser unas instrucciones, un indice u otros. Cada elemento de una lista debe colocarse dentro de un elemento ``<li>``. Pueden haber dos tipos de lista:
 
-- Listas ordenadas:Son aquellas en las que el orden si importa. La etiqueta a usar es <ol>, que quiere decir ***ordered list***. Un ejemplo:
+- Listas ordenadas:Son aquellas en las que el orden si importa. La etiqueta a usar es ``<ol>``, que quiere decir ***ordered list***. Un ejemplo:
 
 ```
 1. Punto 1
@@ -317,7 +317,7 @@ La listas nos sirven para enumerar ciertos conceptos o desarrollos de texto, com
 3. Punto 3
 ```
 
-- Listas desordenadas: Son aquellas en las que el orden no es relevante. La etiqueta a usar es <ul>, que quiere decir ***unordered list***. Un ejemplo:
+- Listas desordenadas: Son aquellas en las que el orden no es relevante. La etiqueta a usar es ``<ul>``, que quiere decir ***unordered list***. Un ejemplo:
 
 ```
 - Punto 1
@@ -326,15 +326,15 @@ La listas nos sirven para enumerar ciertos conceptos o desarrollos de texto, com
 ```
 
 ### 3.4.3 Otras etiquetas
-**Encabezados** (<h1>, ..., <h6>): Elementos de bloque. Permiten especificar el tipo de encabezado o subencabezado del contenido. 
+**Encabezados** (``<h1>, ..., <h6>``): Elementos de bloque. Permiten especificar el tipo de encabezado o subencabezado del contenido. 
 
-**Párrafos** (<p>): Elementos de bloque. Se utilizan para encerrar párrafos de texto, entendiendo como párrafo un conjunto de frases relacionadas entre sí. 
+**Párrafos** (``<p>``): Elementos de bloque. Se utilizan para encerrar párrafos de texto, entendiendo como párrafo un conjunto de frases relacionadas entre sí. 
 
-**Salto de línea** (<br>). Permite agregar un salto de línea (o "intro") entre párrafos. Muy útil para añadir espacio entre lineas, mejorando la legibilidad.
+**Salto de línea** (``<br>``). Permite agregar un salto de línea (o "intro") entre párrafos. Muy útil para añadir espacio entre lineas, mejorando la legibilidad.
 
-**Separador de línea** (<hr>). Permite agregar una línea horizontal divisoria. Útil para separar visualmente párrafos por ejemplo, mejorando la estética del texto.
+**Separador de línea** (``<hr>``). Permite agregar una línea horizontal divisoria. Útil para separar visualmente párrafos por ejemplo, mejorando la estética del texto.
 
-**Énfasis** (<em>, <strong>). Cuando queremos dar énfasis a una parte de texto para destacar su importancia, disponemos de dos etiquetas. La etiqueta <em> se utiliza para dar énfasis y la etiqueta <strong> para dar más énfasis aún.
+**Énfasis** (``<em>``, ``<strong>``). Cuando queremos dar énfasis a una parte de texto para destacar su importancia, disponemos de dos etiquetas. La etiqueta ``<em>`` se utiliza para dar énfasis y la etiqueta ``<strong>`` para dar más énfasis aún.
 
 ## 3.5 Código HTML
 Para conseguir que nuestro código HTML sea correcto en todos los aspectos, hay que tener en cuenta varias facetas que influyen en el mismo código. 
