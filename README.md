@@ -1,8 +1,9 @@
 # **Mis apuntes de 0373 - ASIX1**
 
-1. [GITHUB](#1.GITHUB "Enlace a los apuntes de GitHub")
-2. [MARKDOWN](#2.MARKDOWN "Enlace a los apuntes de MarkDown")
-3. [HTML](#3.HTML "Enlace a los apuntes de HTML")
+1. [GITHUB](#1-github "Enlace a los apuntes de GitHub")
+2. [MARKDOWN](#2-markdown "Enlace a los apuntes de MarkDown")
+3. [HTML](#3-html "Enlace a los apuntes de HTML")
+
 
 # 1. GITHUB
 
@@ -131,6 +132,7 @@ Para colocar una imagen el proceso será similar al de los enlaces, pero el enla
 ```
 
 ![Raphinha](https://github.com/AriamSS/0373_A01_DocumentacionApuntes_SanchezAriam/blob/main/R11.jpg?raw=true "Raphinha")
+<br>
 Un ejemplo de imagen
 
 ## 2.6 Tablas
@@ -166,3 +168,203 @@ La tabla quedaria de la siguiente manera:
 |DAW2 | Curso 24-25 | 32|
 |ASIX2 | Curso 24-25 | 30|
 
+
+
+# 3. HTML
+
+## 3.1 Introducción a HTML
+- Lenguaje de marcado estándar para crear páginas web.
+- Lenguaje más importante de Internet dado que sin HTML no se veria nada en el navegador.
+- Define la estructura y el contenido o describe el contenido.
+- Los elementos de HTML (etiquetas) son los bloques de construccion de las páginas HTML.
+
+HTML (HyperText Markup Language): 
+- HyperText: significa hipertexto y es un texto que enlaza con otros contenidos. 
+- Markup: significa marca o etiqueta, ya que todas las páginas web están construidas en base a etiquetas. 
+- Language: significa lenguaje.
+
+HTML no es un lenguaje de programación. 
+Fue creado por Tim Berners-Lee.
+
+La estructura y contenido de HTML se define mediante etiquetas. Este es un lenguaje muy facil de interpretar, por eso es tan utilizado. Tambien es capaz de cambiar la apariencia de un texto mediante **CSS**.
+
+## 3.2 Elementos
+Las partes principales de un elemento son:
+- Etiqueta de apertura
+- Etiqueta de cierre
+- Contenido
+- Elemento
+
+Se pueden colocar elementos dentro de otros elementos, a esto se le llama **anidamiento**.
+  
+### 3.2.1 ¿Que son las etiquetas?
+Las etiquetas se pueden definir como código que tiene como función estructurar HTML. La etiqueta de apertura indica el inicio de un bloque HTML y la etiqueta de cierre indica el final de un bloque HTML, aunque estas no siempre se cierran.
+
+```
+Etiqueta de apertura: <p>
+Etiqueta de cierre: </p>
+```
+
+**NORMAS BÁSICAS DE ETIQUETAS HTML**:
+- Las etiquetas HTML suelen venir en pares, con una etiqueta de apertura y una de cierre, como por ejemplo <p> y </p>. 
+- Algunas etiquetas, conocidas como etiquetas vacias, no tienen una etiqueta de cierre. Algunas son: <img>, <br>...
+- Las etiquetas HTML deben anidarse correctamente. Por ejemplo, si una etiqueta <b> se abre dentro de una etiqueta <p>, debe cerrarse la etiqueta <b> antes de que se cierre la etiqueta <p> para poder leer el código corréctamente. 
+- Los atributos de las etiquetas se especifican en la etiqueta de apertura y suelen tener el formato nombre "valor". Por ejemplo, en <img sre imagen.jpg>, "src" es un atributo que especifica la ubicación de la imagen.
+  
+### 3.2.2 ¿Que son los atributos?
+Los atributos buscan dar información extra a una etiqueta, dando detalles como por ejemplo:
+
+```
+<img src="URL">"Texto alternativo para la imagen" </img>
+```
+
+En esta etiqueta se puede ver la dirección o ubicación de la imagen y un texto que da información sobre la propia imagen.
+
+- Los atributos siempre se incluyen en la etiqueta de apertura de un elemento. 
+- Estos siempre deben contener espacio antes del nombre del elemento. 
+- El nombre del atributo irá seguido por un signo igual (=).
+- Comillas de apertura y de cierre, encerrando el valor del propio atributo.
+
+# 3.3 Estructura básica de un fichero HTML
+Un documento de HTML sigue una estructura básica, la cuál se puede implementar ejecutando **HTML 5** dentro del mismo documento. Una vez ejecutado quedaria de la siguiente manera:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+
+Cada una de las etiquetas tiene un signficado:
+- <!DOCTYPE html>: Define el tipo de documento, que seria HTML 5.
+- <html></html>: Contenedor principal del documento HTML.
+- <head></head>: Contiene informacion adicional sobre el documento, la cual no se muestra en la página web.
+- <meta></meta>: Proporciona metadatos, los cuáles son datos sobre los datos de la página y no son visibles directamente para los usuarios, pero son importantes para los navegadores en los que visualizamos nuestra página web.
+- <title></title>: Indica el titulo de la pagina web que aparece al abrir las pestaña en el navegador.
+- <body></body>: Muestra el contenido visible en la página web, todo lo que queremos crear y mostrar.
+
+# 3.4 Etiquetas
+
+### 3.4.1 Tipos de etiquetas
+Las etiquetas se pueden clasificar en 2 tipos de elemento:
+- Elementos de bloque: Elementos que requieren de una linea nueva para poder ejecutarse. También se pueden definir como grandes estructuras que pueden contener otros elementos de bloque.
+Ej: `<h1>`-`<h6>`, `<p></p>`, `<ol>`, `<ul>`, `<li>`
+
+- Elementos de línea: Elementos que se ubican en la misma línea, se ejecutan antes de un bloque. También se pueden definir como pequeñas estructuras que describen pequeños trozos de texto o datos, es decir, otros elementos de línea. 
+Ej: `<strong>`, `<a>`
+
+### 3.4.2 Etiquetas básicas de HTML
+
+#### Rutas
+Las rutas se usan en HTML para referenciar una imagen o una dirección URL. En otras palabras, podemos usar rutas para especificar la ubicación de estos archivos. Existen dos tipos de ruta:
+
+- Ruta absoluta: Como su nombre indica, la ruta absoluta define la ubicación del archivo en la web al completo, comenzando desde el dominio. Un ejemplo seria: 
+
+```
+<img src="https.//www.example.com/images/logo.png" alt="Logo de Ejemplo">
+```
+
+- Ruta relativa: La ruta relativa especifica la ubicación del archivo en relación con el archivo actual. Por ejemplo:
+
+```
+<img src="images/logo.png" alt="Logo de Mi Sitio">
+```
+
+#### Enlaces
+La etiqueta utilizada en HTML para la creación de enlaces es <a>. Esta etiqueta es una etiqueta de linea, ya que podemos colocar enlaces y escribir texto alrededor de los mismos. Pueden haber dos tipos de enlaces:
+
+- Enlaces a páginas externas: Este sirve para fabricar enlaces que nos dirigan a páginas web externas. La estructura a usar para crear este tipo de enlace seria:
+  
+```
+<a href="URL página web externa">Texto Visible</a>
+```
+
+- Enlaces a páginas locales: Estos enlaces nos dirigen a un documento local propio. Un ejemplo:
+
+```
+<a href="index.html" title="Volver a la página de inicio">Inicio</a>
+```
+
+En estos códigos, el atributo **href** nos indica la dirección del enlace. 
+
+#### Imágenes
+Uno de los recursos más utilizados en páginas web. Las imágenes proporcionan informacion de manera visual, lo que da soporte a nuestra página web y mejora la estética de la misma. La etiqueta utilizada para insertar una imagen es <img>, etiqueta que no tiene tiene cierre, es decir, se cierra en sí misma. Un ejemplo de uso:
+
+```
+<img src="imagen.png" alt="Imagen principal de la página web" width="120" height="120">
+```
+
+Donde:
+<src> --> Atributo que especifica la ubicación de la imagen.
+<alt> --> Proporciona un texto alternativo para la imagen.
+<width> / <height> --> Modifica las medidas de la imagen; altura y anchura.
+
+#### Listas
+La listas nos sirven para enumerar ciertos conceptos o desarrollos de texto, como pueden ser unas instrucciones, un indice u otros. Cada elemento de una lista debe colocarse dentro de un elemento <li>. Pueden haber dos tipos de lista:
+
+- Listas ordenadas:Son aquellas en las que el orden si importa. La etiqueta a usar es <ol>, que quiere decir ***ordered list***. Un ejemplo:
+
+```
+1. Punto 1
+2. Punto 2
+3. Punto 3
+```
+
+- Listas desordenadas: Son aquellas en las que el orden no es relevante. La etiqueta a usar es <ul>, que quiere decir ***unordered list***. Un ejemplo:
+
+```
+- Punto 1
++ Punto 2
+* Punto 3
+```
+
+### 3.4.3 Otras etiquetas
+**Encabezados** (<h1>, ..., <h6>): Elementos de bloque. Permiten especificar el tipo de encabezado o subencabezado del contenido. 
+
+**Párrafos** (<p>): Elementos de bloque. Se utilizan para encerrar párrafos de texto, entendiendo como párrafo un conjunto de frases relacionadas entre sí. 
+
+**Salto de línea** (<br>). Permite agregar un salto de línea (o "intro") entre párrafos. Muy útil para añadir espacio entre lineas, mejorando la legibilidad.
+
+**Separador de línea** (<hr>). Permite agregar una línea horizontal divisoria. Útil para separar visualmente párrafos por ejemplo, mejorando la estética del texto.
+
+**Énfasis** (<em>, <strong>). Cuando queremos dar énfasis a una parte de texto para destacar su importancia, disponemos de dos etiquetas. La etiqueta <em> se utiliza para dar énfasis y la etiqueta <strong> para dar más énfasis aún.
+
+## 3.5 Código HTML
+Para conseguir que nuestro código HTML sea correcto en todos los aspectos, hay que tener en cuenta varias facetas que influyen en el mismo código. 
+
+### 3.5.1 Legibilidad y organización del código
+La legibilidad del código fuente es la claridad con la que está codificado, la cuál nos permite entenderlo de manera fácil y rápida. Es fundamental que el código fuente HTML que generemos sea legible.
+
+La organización del código fuente es la estructuración de la aplicación web en varios archivos, asi como la clasificación de estos archivos en los directorios que sean necesarios. Es recomendable que el archivo de inicio de las aplicaciones tenga el nombre index.html.
+
+Se debe tener en cuenta que todo el trabajo que hayamos desarrollado sea legible para aquellos que trabajan con nuestro documento, de manera que puedan entender que hemos hecho y por qué lo hemos hecho. 
+
+
+Hay varias técnicas para que el código sea legible y tenga una correcta organización:
+
+- Los comentarios
+
+- La indentación del código
+
+- La organización de los archivos
+
+#### 3.5.2 Comentarios
+Dentro de un documento HTML podemos poner anotaciones o comentarios que nos serviran para guiarnos o entender el código. Estas anotaciones no se visualizaran en nuestra página web. La sintaxis para añadir comentarios es la siguiente:
+
+```
+<!-- comentario -->
+```
+
+### 3.5.3 Validación del código
+La validación del código es el proceso a través del cuál verificamos que nuestro código HTML sea correcto y cumpla con los estandares establecidos por el World Wide Web Consortium, de manera que la validación ayuda a detectar cualquier fallo y nos advierte ante cualquier parte del código que no sea del todo correcta.
+
+El validador --> [W3C: Validador de HTML](https://validator.w3.org "Validador de HTML W3C")
+
+## 3.6 Formularios 
