@@ -4,6 +4,7 @@
 2. [MARKDOWN](#2-markdown "Enlace a los apuntes de MarkDown")
 3. [HTML](#3-html "Enlace a los apuntes de HTML")
 
+<br>
 
 # 1. GITHUB
 
@@ -47,7 +48,7 @@ Estos son algunos de los comandos a utilizar en el terminal para tranferir archi
  - ``git push origin main`` --> Envia el commit y sube los archivos a github (desde la rama "main", en la que tenemos nuestra carpeta local, hasta la rama "origin", donde se encuentra el repositorio.)
  - ``git remote add origin "URL del repositorio"`` --> Se usa para clonar un repositorio remoto a nuestra carpeta local.
   
-
+<br>
 
 # 2. MARKDOWN
 
@@ -168,7 +169,7 @@ La tabla quedaria de la siguiente manera:
 |DAW2 | Curso 24-25 | 32|
 |ASIX2 | Curso 24-25 | 30|
 
-
+<br>
 
 # 3. HTML
 
@@ -370,7 +371,7 @@ El validador --> [W3C: Validador de HTML](https://validator.w3.org "Validador de
 ## 3.6 Formularios 
 Los formularios nos sirven como herramienta para crear una interacción con el usuario, de manera que este pueda transmitirnos información o datos sobre el mismo usuario para ser procesados posteriormente.
 
-# 3.6.1 Etiquetas de formularios
+### 3.6.1 Etiquetas de formularios
 ``<input>``: Se utiliza para crear diferentes campos interactivos en un formulario y recibir datos del usuario. Los atributos comunes de esta etiqueta son:
 
 - type: Define el tipo de entrada a mostrar. Ejemplos: text, password, radio, checkbox...
