@@ -3,6 +3,7 @@
 1. [GITHUB](#1-github "Enlace a los apuntes de GitHub")
 2. [MARKDOWN](#2-markdown "Enlace a los apuntes de MarkDown")
 3. [HTML](#3-html "Enlace a los apuntes de HTML")
+4. [CSS](#3-css "Enlace a los apuntes de CSS")
 
 <br>
 
@@ -20,16 +21,17 @@ GitHub se define como una plataforma que se utiliza para el control de versiones
 
 ## 1.3 Creación de una cuenta en GitHub
 Para crear una cuenta en GitHub y comenzar a trabajar debemos seguir los siguientes pasos:
-1. Visitar la página web de GitHub.
-2. Registrarse y crear una nueva cuenta.
+1. Visitar la página web de GitHub (https://github.com/).
+2. Registrarse y crear una nueva cuenta (Sign Up).
 3. Introducir un nombre de usuario junto a un correo electrónico y una contraseña segura.
 4. Completar el proceso de verificación y la configuración inicial de la cuenta.
+   
 Una vez tengamos nuestra cuenta en GitHub, podremos crear un repositorio en el que trabajar.
 
 ## 1.4 Repositorios: Funcionamiento
 
 ### 1.4.1. Creación de un repositorio
-Dentro de GithHub con nuestra sesión iniciada:
+Dentro de GitHub con nuestra sesión iniciada:
 1. Hacemos click en la opción "Nuevo" en la pagina principal para crear un repositorio. También le podemos dar a la opción "Crear repositorio" si nos aparece.
 2. Introducimos el nombre de nuestro repositorio.
 3. Podemos agregar una descripción, escoger si mostrar el repositorio como público o privado e incluso añadir un archivo README una vez inicialicemos por primera vez el repositorio, entre algunas otras opciones más.
@@ -134,7 +136,7 @@ Para colocar una imagen el proceso será similar al de los enlaces, pero el enla
 
 ![Raphinha](https://github.com/AriamSS/0373_A01_DocumentacionApuntes_SanchezAriam/blob/main/R11.jpg?raw=true "Raphinha")
 <br>
-Un ejemplo de imagen
+Un ejemplo de imagen.
 
 ## 2.6 Tablas
 Para comenzar a crear la tabla, debemos empezar por los respectivos títulos de cada columna. Cada columna de la tabla se dividirá por el siguiente símbolo "|", de manera que la primera fila quedará asi:
@@ -216,7 +218,7 @@ Etiqueta de cierre: </p>
 Los atributos buscan dar información extra a una etiqueta, dando detalles como por ejemplo:
 
 ```
-<img src="URL">"Texto alternativo para la imagen" </img>
+<img src="URL">"Texto alternativo para la imagen"</img>
 ```
 
 En esta etiqueta se puede ver la dirección o ubicación de la imagen y un texto que da información sobre la propia imagen.
@@ -356,7 +358,7 @@ Hay varias técnicas para que el código sea legible y tenga una correcta organi
 
 - La organización de los archivos
 
-#### 3.5.2 Comentarios
+### 3.5.2 Comentarios
 Dentro de un documento HTML podemos poner anotaciones o comentarios que nos serviran para guiarnos o entender el código. Estas anotaciones no se visualizaran en nuestra página web. La sintaxis para añadir comentarios es la siguiente:
 
 ```
@@ -368,7 +370,7 @@ La validación del código es el proceso a través del cuál verificamos que nue
 
 El validador --> [W3C: Validador de HTML](https://validator.w3.org "Validador de HTML W3C")
 
-## 3.6 Formularios 
+## 3.6 HTML Semántico: Formularios 
 Los formularios nos sirven como herramienta para crear una interacción con el usuario, de manera que este pueda transmitirnos información o datos sobre el mismo usuario para ser procesados posteriormente.
 
 ### 3.6.1 Etiquetas de formularios
@@ -431,3 +433,46 @@ Los formularios nos sirven como herramienta para crear una interacción con el u
 - name: Nombre del campo de entrada.
 - value: Valor predeterminado del campo de entrada.
 - disabled: Desactiva el campo, prohibiendo que el usuario pueda interactuar con él.
+
+## 3.7 HTML Semántico: Tablas
+Las tablas son un recurso que nos permite mostrar información distribuida en filas y columnas diferentes. 
+
+### 3.7.1 Etiquetas de tablas
+Para mostrar las diferentes etiquetas disponibles, usaremos una tabla en la que dividiremos la información.
+
+#### 3.7.1.1 Etiquetas principales: Creación y estructura
+
+| **Etiqueta** | **Función** | 
+|--------------|-------------|
+| `<table>`    | Inicia una tabla |
+| `<thead>`    | Encabezado de una tabla |
+| `<tbody>`    | Cuerpo de una tabla | 
+| `<tfoot>`    | Pie de una tabla |
+
+Sobre las etiquetas:
+
+```<table>```: Esta etiqueta dispone de algunos atributos como `border`, que nos ayuda a modificar el grosor del borde de nuestra tabla, o `width` que nos ayuda a modificar el ancho de nuestra tabla.
+
+```<thead>```: Esta etiqueta normalmente contiene etiquetas <th>, las cuáles se explicarán en la tabla que sigue a continuación.
+
+```<tbody>```: Esta etiqueta es útil si queremos separar el contenido del encabezado del contenido del pie de tabla.
+
+```<tfoot>```: Generalmente, esta etiqueta se utiliza para resumir o agrupar la información final de la tabla.
+
+#### 3.7.1.2 Etiquetas secundarias: Celdas y filas
+
+| **Etiqueta** | **Función** |
+|--------------|-------------|
+| `<tr>`       | Fila de una tabla | 
+| `<th>`       | Celda de encabezado | 
+| `<td>`       | Celda de información | 
+
+```<tr>```: Esta etiqueta dispone de algunos atributos como `align`, con el que podemos alinear el contenido de una fila, incluyendo **left**, **right** o **center** en función de como queremos alinear el mismo contenido. También disponemos de `bgcolor`, que nos ayuda a modificar el color de fondo de nuestra tabla, o `valign`, que nos ayuda a alinear verticalmente la tabla.
+
+```<th>```: Esta etiqueta dispone de dos atributos a usar. Por un lado, `colspan`, define cuántas columnas abarca la celda. Por otro lado, `rowspan`, define cuántas filas abarca la celda.
+
+```<td>```: Para esta etiqueta los atributos son los mismos que en <th>, añadiendo que también se le puede dar uso al `align` para alinear el contenido de la celda, de igual manera que en la etiqueta <tr>.
+
+<br>
+
+# 4. CSS
