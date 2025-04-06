@@ -3,7 +3,7 @@
 1. [GITHUB](#1-github "Enlace a los apuntes de GitHub")
 2. [MARKDOWN](#2-markdown "Enlace a los apuntes de MarkDown")
 3. [HTML](#3-html "Enlace a los apuntes de HTML")
-4. [CSS](#3-css "Enlace a los apuntes de CSS")
+4. [CSS](#4-css "Enlace a los apuntes de CSS")
 
 <br>
 
@@ -281,7 +281,7 @@ Las rutas se usan en HTML para referenciar una imagen o una dirección URL. En o
 ```
 
 #### Enlaces
-La etiqueta utilizada en HTML para la creación de enlaces es <a>. Esta etiqueta es una etiqueta de linea, ya que podemos colocar enlaces y escribir texto alrededor de los mismos. Pueden haber dos tipos de enlaces:
+La etiqueta utilizada en HTML para la creación de enlaces es ```<a>```. Esta etiqueta es una etiqueta de linea, ya que podemos colocar enlaces y escribir texto alrededor de los mismos. Pueden haber dos tipos de enlaces:
 
 - Enlaces a páginas externas: Este sirve para fabricar enlaces que nos dirigan a páginas web externas. La estructura a usar para crear este tipo de enlace seria:
   
@@ -406,8 +406,8 @@ Los formularios nos sirven como herramienta para crear una interacción con el u
 - disabled: Desactiva el campo, prohibiendo que el usuario pueda interactuar con él.
 - readonly: Hace que el campo sea únicamente de lectura, evitando que pueda modificarse su contenido.
 
-``<label>``: Agrega una etiqueta o descripción para un elemento de formulario, como un campo de entrada o una opción en un menú desplegable. Es útil para mejorar la accesibilidad y la usabilidad del formulario. Sus atributos son:
-- for: Especifica a qué elemento está asociado el <label>.
+```<label>```: Agrega una etiqueta o descripción para un elemento de formulario, como un campo de entrada o una opción en un menú desplegable. Es útil para mejorar la accesibilidad y la usabilidad del formulario. Sus atributos son:
+- for: Especifica a qué elemento está asociado el ```<label>```.
 - form: Permite asociar la etiqueta con un formulario específico si hay varios formularios en la página.
 
 ```<select>```: Utillizado para crear el contenedor de un menú desplegable. Permite al usuario la selección de una única opción dentro de una lista de opciones. Sus atributos comunes son:
@@ -453,7 +453,7 @@ Sobre las etiquetas:
 
 ```<table>```: Esta etiqueta dispone de algunos atributos como `border`, que nos ayuda a modificar el grosor del borde de nuestra tabla, o `width` que nos ayuda a modificar el ancho de nuestra tabla.
 
-```<thead>```: Esta etiqueta normalmente contiene etiquetas <th>, las cuáles se explicarán en la tabla que sigue a continuación.
+```<thead>```: Esta etiqueta normalmente contiene etiquetas ```<th>```, las cuáles se explicarán en la tabla que sigue a continuación.
 
 ```<tbody>```: Esta etiqueta es útil si queremos separar el contenido del encabezado del contenido del pie de tabla.
 
@@ -471,7 +471,7 @@ Sobre las etiquetas:
 
 ```<th>```: Esta etiqueta dispone de dos atributos a usar. Por un lado, `colspan`, define cuántas columnas abarca la celda. Por otro lado, `rowspan`, define cuántas filas abarca la celda.
 
-```<td>```: Para esta etiqueta los atributos son los mismos que en <th>, añadiendo que también se le puede dar uso al `align` para alinear el contenido de la celda, de igual manera que en la etiqueta <tr>.
+```<td>```: Para esta etiqueta los atributos son los mismos que en ```<th>```, añadiendo que también se le puede dar uso al `align` para alinear el contenido de la celda, de igual manera que en la etiqueta ```<tr>```.
 
 <br>
 
