@@ -370,10 +370,13 @@ La validación del código es el proceso a través del cuál verificamos que nue
 
 El validador --> [W3C: Validador de HTML](https://validator.w3.org "Validador de HTML W3C")
 
-## 3.6 HTML Semántico: Formularios 
+## 3.6 HTML Semántico
+
+
+### 3.6.1 Formularios 
 Los formularios nos sirven como herramienta para crear una interacción con el usuario, de manera que este pueda transmitirnos información o datos sobre el mismo usuario para ser procesados posteriormente.
 
-### 3.6.1 Etiquetas de formularios
+#### 3.6.1.1 Etiquetas de formularios
 ``<input>``: Se utiliza para crear diferentes campos interactivos en un formulario y recibir datos del usuario. Los atributos comunes de esta etiqueta son:
 
 - type: Define el tipo de entrada a mostrar. Ejemplos: text, password, radio, checkbox...
@@ -434,13 +437,13 @@ Los formularios nos sirven como herramienta para crear una interacción con el u
 - value: Valor predeterminado del campo de entrada.
 - disabled: Desactiva el campo, prohibiendo que el usuario pueda interactuar con él.
 
-## 3.7 HTML Semántico: Tablas
+### 3.6.2 Tablas
 Las tablas son un recurso que nos permite mostrar información distribuida en filas y columnas diferentes. 
 
-### 3.7.1 Etiquetas de tablas
+#### 3.6.2.1 Etiquetas de tablas
 Para mostrar las diferentes etiquetas disponibles, usaremos una tabla en la que dividiremos la información.
 
-#### 3.7.1.1 Etiquetas principales: Creación y estructura
+##### Etiquetas principales: Creación y estructura
 
 | **Etiqueta** | **Función** | 
 |--------------|-------------|
@@ -459,7 +462,7 @@ Sobre las etiquetas:
 
 ```<tfoot>```: Generalmente, esta etiqueta se utiliza para resumir o agrupar la información final de la tabla.
 
-#### 3.7.1.2 Etiquetas secundarias: Celdas y filas
+##### Etiquetas secundarias: Celdas y filas
 
 | **Etiqueta** | **Función** |
 |--------------|-------------|
@@ -476,3 +479,44 @@ Sobre las etiquetas:
 <br>
 
 # 4. CSS
+
+## 4.1 Introducción a CSS
+CSS (Cascading Style Sheets) es un lenguaje utilizado para definir el aspecto y el formato de documentos HTML y XML. Permite modificar el diseño, los colores, las fuentes y otros aspectos gráficos de una página web de manera separada del contenido estructural que forma la página.
+
+En los inicios HTML era muy básico y no permitía mostrar elementos visuales atractivos. A medida que los sitios web se volvian más complejos, se necesitaban nuevas formas de mejorar su apariencia sin afectar a la estructura principal. Para separar el contenido de la parte visual, surgieron las hojas de estilo y el lenguaje CSS. Mientras HTML define la estructura y la función de cada elemento, CSS se encarga de decirle al navegador cómo debe verse ese elemento (por ejemplo, su color, tamaño o posición).
+
+## 4.2 Ventajas e inconvenientes
+Las principales ventajas de usar CSS son:
+
+- Facilita el mantenimiento del código.
+
+- Puede ser reutilizado en varios archivos HTML.
+
+- Ofrece más opciones de diseño que el (X)HTML.
+
+- Es un lenguaje fácil de entender y usar.
+
+- Permite aplicar diferentes estilos a un mismo documento según la situación (por ejemplo, para pantalla o impresión).
+
+Por otro lado, la desventaja principal es que no todos los navegadores interpretan las hojas de estilo de la misma manera, lo que puede generar problemas de compatibilidad, obligando al desarrollador a crear estilos específicos para cada uno.
+
+## 4.3 Ubicación
+Los estilos pueden colocarse en distintos lugares dentro del documento (X)HTML, aplicandolos de diferentes formas.
+
+### 4.3.1 Estilo en línea (inline)
+Se escribe directamente dentro de la etiqueta HTML. Dicho de otra manera, se añaden las propiedades CSS directamente en el elemento usando el atributo "style". Un ejemplo seria ```<p style="text-align:center; color:blue">Texto centrado azul</p>```.
+
+### 4.3.2 Estilo interno
+Se coloca en la sección ```<head>``` del documento HTML. Podemos poner diferentes propiedades CSS dentro del elemento <style>, como se muestra en el siguiente ejemplo:
+```<head>```
+```<style>```
+    ```p {```
+       ``` text-align: center;```
+       ``` color: blue;```
+   ``` }```
+```</style>```
+```</head>```
+
+### 4.3.3 Estilo externo
+Se escribe en un archivo CSS separado y se vincula al HTML al que queremos aplicarle el diseño.
+
