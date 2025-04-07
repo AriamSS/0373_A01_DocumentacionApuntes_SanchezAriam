@@ -588,7 +588,8 @@ Ejemplo: color: red !important;
 5. Herencia
 Algunas propiedades (como color o font-family) se heredan, pero tienen menos prioridad que una regla directa.
 
-**Resumen de prioridad**
+###### **Resumen de prioridad**
+
 !important > Inline > ID > Clases/Atributos > Elementos > Herencia.
 
 ## 4.5 Sintaxis Básica CSS 
@@ -618,7 +619,7 @@ Ejemplo:
 
 ## 4.6 Selectores CSS
 
-## 4.6.1 Agrupación de selectores
+### 4.6.1 Agrupación de selectores
 Cuando necesitamos aplicar los mismos estilos CSS a varios elementos diferentes, podemos optimizar nuestro código agrupando los selectores en lugar de repetir las mismas declaraciones para cada elemento. Un ejemplo podria ser el siguiente:
 
 **Forma no optimizada (repetitiva)**:
@@ -763,3 +764,95 @@ Ejemplo: ``input:focus { border-color: yellow; }``
 ``::after``: Inserta contenido al final.
 
 ``::selection``: Texto seleccionado por el usuario.
+
+## 4.7 COMPOSICIÓN
+
+### 4.7.1 display: flex (Flexbox)
+
+#### 4.7.1.1 Introducción
+Flexbox es un modelo de diseño CSS moderno que permite crear layouts flexibles y responsivos con facilidad, superando las limitaciones de métodos tradicionales (como float o position). La sintaxis es la siguiente:
+
+```
+.contenedor {
+  display: flex; /* Activa Flexbox */
+}
+```
+
+###### Componentes Principales
+- Contenedor Flex: Elemento padre con display: flex.
+
+- Items Flex: Hijos directos del contenedor.
+
+#### 4.7.1.2 Conceptos
+1. Contenedor Flex (Elemento Padre)
+El corazón de Flexbox es el contenedor padre. Al aplicar:
+
+- Todos los hijos directos se convierten automáticamente en items flexibles.
+
+- El contenedor controla cómo se distribuyen y alinean estos items.
+
+2. Los Dos Ejes Fundamentales
+   
+###### Eje Principal (Primario):
+
+- Dirección por defecto: horizontal (de izquierda a derecha)
+
+- Se controla con flex-direction
+
+###### Eje Secundario (Cruzado):
+
+- Siempre perpendicular al eje principal
+
+Si principal es horizontal → secundario es vertical
+
+Si principal es vertical → secundario es horizontal
+
+### 4.7.2 Diseño Responsive
+El diseño responsive es una técnica de desarrollo web que permite que las páginas se adapten automáticamente a diferentes dispositivos y tamaños de pantalla (ordenadores, tablets, smartphones, etc.).
+
+###### Características clave
+
+1. Flexibilidad y Adaptabilidad:
+
+- Elementos (textos, imágenes, menús) se redimensionan automáticamente.
+
+- Estructuras fluidas que se ajustan al espacio disponible.
+
+2. Media Queries:
+
+Reglas CSS condicionales basadas en el ancho/alto de pantalla, la orientación (horizontal/vertical) o la resolución de pantalla.
+
+3. Rejillas fluidas:
+
+- Uso de unidades relativas (% em, rem, vw, vh)
+
+- Contenedores flexibles en lugar de tamaños fijos
+
+4. Elementos escalables:
+
+- Imágenes responsivas (max-width: 100%)
+
+- Tipografías flexibles (unidades relativas)
+
+- Iconos vectoriales (SVG)
+
+### 4.7.3 Media Queries
+Las media queries son una funcionalidad clave de CSS que permiten adaptar los estilos de una página web según las características del dispositivo o ventana del navegador. Estas características incluyen:
+
+- Ancho y alto de pantalla
+
+- Orientación (horizontal/vertical)
+
+- Resolución
+
+- Tipo de dispositivo
+  
+Son fundamentales para crear sitios web que se adapten automáticamente a diferentes dispositivos como ordenadores, tablets o teléfonos móviles.
+
+###### Sintaxis Básica
+
+```
+@media (condición) {
+  /* Estilos que se aplican cuando se cumple la condición */
+}
+```
