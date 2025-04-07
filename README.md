@@ -462,6 +462,7 @@ Sobre las etiquetas:
 
 ```<tfoot>```: Generalmente, esta etiqueta se utiliza para resumir o agrupar la información final de la tabla.
 
+
 ##### Etiquetas secundarias: Celdas y filas
 
 | **Etiqueta** | **Función** |
@@ -509,7 +510,7 @@ Se escribe directamente dentro de la etiqueta HTML. Dicho de otra manera, se añ
 ```<p style="text-align:center; color:blue">Texto centrado azul</p>```
 
 ### 4.3.2 Estilo interno
-Se coloca en la sección ```<head>``` del documento HTML. Podemos poner diferentes propiedades CSS dentro del elemento <style>, como se muestra en el siguiente ejemplo:
+Se coloca en la sección ```<head>``` del documento HTML. Podemos poner diferentes propiedades CSS dentro del elemento ```<style>```, como se muestra en el siguiente ejemplo:
 
 ```
 <!DOCTYPE html>
@@ -579,14 +580,17 @@ Ejemplo:
 ``#main .box h1 → 100 (ID) + 10 (clase) + 1 (elemento) = 111`` 
 
 3. Orden de Declaración
+   
 Si dos reglas tienen la misma especificidad, gana la que aparece **última** en el CSS.
 
 4. !important
+   
 **Anula cualquier otra regla**, incluso con mayor especificidad.
 Ejemplo: color: red !important;
 
 5. Herencia
 Algunas propiedades (como color o font-family) se heredan, pero tienen menos prioridad que una regla directa.
+
 
 ###### **Resumen de prioridad**
 
