@@ -481,7 +481,7 @@ Sobre las etiquetas:
 # 4. CSS
 
 ## 4.1 Introducción a CSS
-CSS (Cascading Style Sheets) es un lenguaje utilizado para definir el aspecto y el formato de documentos HTML y XML. Permite modificar el diseño, los colores, las fuentes y otros aspectos gráficos de una página web de manera separada del contenido estructural que forma la página.
+**CSS (Cascading Style Sheets)** es un lenguaje utilizado para definir el aspecto y el formato de documentos HTML y XML. Permite modificar el diseño, los colores, las fuentes y otros aspectos gráficos de una página web de manera separada del contenido estructural que forma la página.
 
 En los inicios HTML era muy básico y no permitía mostrar elementos visuales atractivos. A medida que los sitios web se volvian más complejos, se necesitaban nuevas formas de mejorar su apariencia sin afectar a la estructura principal. Para separar el contenido de la parte visual, surgieron las hojas de estilo y el lenguaje CSS. Mientras HTML define la estructura y la función de cada elemento, CSS se encarga de decirle al navegador cómo debe verse ese elemento (por ejemplo, su color, tamaño o posición).
 
@@ -504,19 +504,262 @@ Por otro lado, la desventaja principal es que no todos los navegadores interpret
 Los estilos pueden colocarse en distintos lugares dentro del documento (X)HTML, aplicandolos de diferentes formas.
 
 ### 4.3.1 Estilo en línea (inline)
-Se escribe directamente dentro de la etiqueta HTML. Dicho de otra manera, se añaden las propiedades CSS directamente en el elemento usando el atributo "style". Un ejemplo seria ```<p style="text-align:center; color:blue">Texto centrado azul</p>```.
+Se escribe directamente dentro de la etiqueta HTML. Dicho de otra manera, se añaden las propiedades CSS directamente en el elemento usando el atributo "style". Un ejemplo seria:
+
+```<p style="text-align:center; color:blue">Texto centrado azul</p>```
 
 ### 4.3.2 Estilo interno
 Se coloca en la sección ```<head>``` del documento HTML. Podemos poner diferentes propiedades CSS dentro del elemento <style>, como se muestra en el siguiente ejemplo:
-```<head>```
-```<style>```
-    ```p {```
-       ``` text-align: center;```
-       ``` color: blue;```
-   ``` }```
-```</style>```
-```</head>```
+
+```
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<!-- ... -->
+<style>
+    p {
+        text-align: center;
+        color: blue;
+    }
+</style>
+</head>
+<body>
+    <p>Texto centrado azul</p>
+    <p>Texto centrado azul</p>
+</body>
+</html>
+```
 
 ### 4.3.3 Estilo externo
-Se escribe en un archivo CSS separado y se vincula al HTML al que queremos aplicarle el diseño.
+Se escribe en un archivo CSS separado y se vincula al HTML al que queremos aplicarle el diseño. Desde el documento HTML se enlaza con esta hoja de estilo usando la etiqueta <link> dentro del elemento <head>. Por ejemplo:
 
+**Documento HTML** (*index.html*):
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilos.css" type="text/css" />
+</head>
+<body>
+    <p>Texto centrado azul</p>
+</body>
+</html>
+```
+
+**Archivo CSS** (*estilos.css*):
+```
+p {
+    text-align: center;
+    color: red;
+}
+```
+
+## 4.4 Prioridad
+
+1. Orden de Aplicación
+· Estilo externo (hoja CSS vinculada): **Menor** prioridad.
+
+· Estilo interno (en ```<style>``` dentro del ```<head>```): Prioridad **media**.
+
+· Estilo inline (atributo style en HTML): **Máxima** prioridad.
+
+2. Especificidad (Sistema de puntuación)
+- Inline styles (style=""): **1000**
+
+- Selectores de ID (#id): **100**
+
+- Clases, atributos, pseudoclases (.clase, [attr], :hover): **10**
+
+- Elementos y pseudoelementos (h1, ::before): **1**
+
+- Combinadores y * **no suman especificidad**.
+
+Ejemplo:
+``#main .box h1 → 100 (ID) + 10 (clase) + 1 (elemento) = 111`` 
+
+3. Orden de Declaración
+Si dos reglas tienen la misma especificidad, gana la que aparece **última** en el CSS.
+
+4. !important
+**Anula cualquier otra regla**, incluso con mayor especificidad.
+Ejemplo: color: red !important;
+
+5. Herencia
+Algunas propiedades (como color o font-family) se heredan, pero tienen menos prioridad que una regla directa.
+
+**Resumen de prioridad**
+!important > Inline > ID > Clases/Atributos > Elementos > Herencia.
+
+## 4.5 Sintaxis Básica CSS 
+
+### 4.5.1 Estructura 
+Una hoja de estilos CSS contiene reglas que definen el aspecto de los documentos HTML. Cada regla consta de 2 partes principales:
+
+- Un selector (indica a qué elementos se aplica)
+
+- Declaraciones (definen los estilos)
+
+De esta manera, cada declaración está compuesta por:
+
+- Una propiedad (o característica a modificar)
+
+- Su valor correspondiente
+
+El selector identifica los elementos HTML objetivo, mientras que las declaraciones especifican cómo deben mostrarse esos elementos, asignando valores a sus propiedades visuales para ajustar estas de manera adecuada.
+
+### 4.5.2 Comentarios
+Al igual que ocurre en los documentos HTML, es posible incluir anotaciones en el código CSS encerrándolas entre los símbolos /* y */. Estas anotaciones pueden extenderse a lo largo de varias líneas, ya que a diferencia de otros lenguajes de programación, CSS únicamente admite este formato de anotaciones en bloque. Los navegadores web omiten completamente el contenido de estas anotaciones al mostrar la página web.
+ 
+Ejemplo:
+```
+/* Esta anotación muestra como se ve un comentario en CSS */
+```
+
+## 4.6 Selectores CSS
+
+## 4.6.1 Agrupación de selectores
+Cuando necesitamos aplicar los mismos estilos CSS a varios elementos diferentes, podemos optimizar nuestro código agrupando los selectores en lugar de repetir las mismas declaraciones para cada elemento. Un ejemplo podria ser el siguiente:
+
+**Forma no optimizada (repetitiva)**:
+```
+h1 {
+  color: red;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: red;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+```
+
+**Forma optimizada (agrupando selectores)**:
+```
+h1, p {
+  color: red;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+```
+Hay que saber que no todos los elementos se pueden agrupar. Los selectores que pueden agruparse son:
+
+- Selectores de etiqueta (h1, p, div)
+
+- Selectores de clase (.clase)
+
+- Selectores de ID (#id)
+
+- Selectores combinados
+
+### 4.6.2 Tipos de selectores
+Existen varios tipos de selectores en CSS, cada uno diseñado para seleccionar ciertos elementos en el documento HTML. Los selectores se clasifican en básicos y avanzados.
+
+#### 4.6.2.1 Selectores Básicos
+- Selector de elementos (selector de tipo): Este selector aplica estilos a todos los elementos HTML que tengan el mismo nombre de etiqueta especificado. Por ejemplo, el siguiente código afectaría a los elementos ```<p>``` del documento:
+
+```
+/* Aplica a todos los elementos <p> del documento HTML */
+p {
+    color: blue;
+}
+```
+
+- Selector de id: Este selector aplica estilos a los elementos HTML que tengan un atributo id con el valor exactamente igual al especificado. Este atributo distingue de manera inequívoca un elemento HTML. Ejemplo:
+  
+```
+<p id="ejemplo">Este párrafo será afectado por el selector **#ejemplo**</p>
+```
+
+- Selector de clase: Este selector aplica estilos a todos los elementos HTML que contengan el atributo class con el valor especificado. Un ejemplo:
+
+```
+<p class="ejemplo">Este párrafo tendrá el estilo</p>
+<li class="ejemplo">Este elemento de lista también</li>
+<div class="ejemplo">Este div de igual manera</div>
+```
+
+#### 4.6.2.2 Selectores Avanzados 
+- Selector universal (*): Este selector permite aplicar estilos a todos los elementos de la página web sin excepción. Por ejemplo:
+
+```
+* {
+    border: 1px solid #000000;
+}
+```
+Esto resultará en que cada elemento del documento HTML mostrará un borde sólido negro de 1 píxel.
+
+- Selectores de atributos: Estos selectores permiten elegir elementos basándose en sus atributos, ofreciendo un mayor control sobre los estilos aplicados. Por ejemplo, en el siguiente selector se aplicarán los cambios a todos los inputs de tipo texto:
+
+```
+input[type="text"] {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+```
+
+- Selectores de hijos (>): Estos selectores permiten aplicar estilos específicamente a elementos que son hijos directos de otros elementos. Un ejemplo sencillo podria ser:
+
+```
+h3 > strong {
+    color: blue;
+}
+``` 
+Donde los elementos ``<strong>`` son hijos directos de ``<h3>``.
+
+- Selectores de descendientes (espacio): Estos selectores permiten aplicar estilos a elementos que se encuentran en cualquier nivel de anidación dentro de otro elemento, a diferencia de los selectores de hijos que solo afectan a elementos directos. Podriamos poner el siguiente ejemplo para entenderlo:
+
+```
+div em {
+  color: red;
+}
+```
+Afectaria a todos los ``<em>`` que se encuentran a continuación del ``<div>``.
+
+- Selectores de hermanos adyacentes (+): Estos selectores permiten aplicar estilos específicamente a un elemento que aparece inmediatamente después de otro elemento en el mismo nivel de jerarquía. Para entenderlo mejor, usaremos la siguiente estructura:
+
+```
+<h1>Encabezado 1</h1>
+<h2>Encabezado 2 (hermano adyacente)</h2>
+<h2>Encabezado 2 (hermano no adyacente)</h2>
+```
+
+Con esta estructura, el código CSS de ejemplo es el siguiente:
+```
+h1 + h2 {
+    margin-top: -5mm;
+}
+```
+Este solo afectará al primer ``<h2>`` que sigue después del ``<h1>``.
+
+- Pseudoclases: Las pseudoclases permiten aplicar estilos a diferentes estados o condiciones de los elementos, no a los elementos en sí mismos. Son particularmente útiles para definir el comportamiento interactivo de componentes como enlaces y formularios. Algunas pseudoclases comunes para enlaces son:
+
+``:link``: Estado inicial de los enlaces no visitados.
+
+Ejemplo: ``a:link { color: blue; }``
+
+``:visited``: Enlaces que ya han sido visitados
+
+Ejemplo: ``a:visited { color: purple; }``
+
+``:hover``: Elemento bajo el cursor del ratón
+
+Ejemplo: ``a:hover { text-decoration: underline; }``
+
+``:focus``: Elemento seleccionado (enlaces, inputs, etc.)
+
+Ejemplo: ``input:focus { border-color: yellow; }``
+
+- Pseudoelementos: Los pseudoelementos permiten aplicar estilos a partes específicas de un elemento, en lugar de afectar al mismo completamente. A diferencia de las pseudoclases que modifican estados, estos actúan sobre fragmentos estructurales del contenido. Algunos pseudoelementos comunes son:
+
+``::first-line``: Primera línea de texto.
+
+``::first-letter``: Primera letra.
+
+``::before``: Inserta contenido al inicio.
+
+``::after``: Inserta contenido al final.
+
+``::selection``: Texto seleccionado por el usuario.
