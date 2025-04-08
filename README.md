@@ -532,7 +532,7 @@ Se coloca en la sección ```<head>``` del documento HTML. Podemos poner diferent
 ```
 
 ### 4.3.3 Estilo externo
-Se escribe en un archivo CSS separado y se vincula al HTML al que queremos aplicarle el diseño. Desde el documento HTML se enlaza con esta hoja de estilo usando la etiqueta <link> dentro del elemento <head>. Por ejemplo:
+Se escribe en un archivo CSS separado y se vincula al HTML al que queremos aplicarle el diseño. Desde el documento HTML se enlaza con esta hoja de estilo usando la etiqueta ```<link>``` dentro del elemento ```<head>```. Por ejemplo:
 
 **Documento HTML** (*index.html*):
 
@@ -559,13 +559,14 @@ p {
 ## 4.4 Prioridad
 
 1. Orden de Aplicación
+   
 · Estilo externo (hoja CSS vinculada): **Menor** prioridad.
 
 · Estilo interno (en ```<style>``` dentro del ```<head>```): Prioridad **media**.
 
 · Estilo inline (atributo style en HTML): **Máxima** prioridad.
 
-2. Especificidad (Sistema de puntuación)
+1. Especificidad (Sistema de puntuación)
 - Inline styles (style=""): **1000**
 
 - Selectores de ID (#id): **100**
@@ -614,7 +615,7 @@ De esta manera, cada declaración está compuesta por:
 El selector identifica los elementos HTML objetivo, mientras que las declaraciones especifican cómo deben mostrarse esos elementos, asignando valores a sus propiedades visuales para ajustar estas de manera adecuada.
 
 ### 4.5.2 Comentarios
-Al igual que ocurre en los documentos HTML, es posible incluir anotaciones en el código CSS encerrándolas entre los símbolos /* y */. Estas anotaciones pueden extenderse a lo largo de varias líneas, ya que a diferencia de otros lenguajes de programación, CSS únicamente admite este formato de anotaciones en bloque. Los navegadores web omiten completamente el contenido de estas anotaciones al mostrar la página web.
+Al igual que ocurre en los documentos HTML, es posible incluir anotaciones en el código CSS encerrándolas entre los símbolos ***/* y */***. Estas anotaciones pueden extenderse a lo largo de varias líneas, ya que a diferencia de otros lenguajes de programación, CSS únicamente admite este formato de anotaciones en bloque. Los navegadores web omiten completamente el contenido de estas anotaciones al mostrar la página web.
  
 Ejemplo:
 ```
