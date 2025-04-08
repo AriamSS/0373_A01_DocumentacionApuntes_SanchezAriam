@@ -615,7 +615,7 @@ De esta manera, cada declaración está compuesta por:
 El selector identifica los elementos HTML objetivo, mientras que las declaraciones especifican cómo deben mostrarse esos elementos, asignando valores a sus propiedades visuales para ajustar estas de manera adecuada.
 
 ### 4.5.2 Comentarios
-Al igual que ocurre en los documentos HTML, es posible incluir anotaciones en el código CSS encerrándolas entre los símbolos **/* y */**. Estas anotaciones pueden extenderse a lo largo de varias líneas, ya que a diferencia de otros lenguajes de programación, CSS únicamente admite este formato de anotaciones en bloque. Los navegadores web omiten completamente el contenido de estas anotaciones al mostrar la página web.
+Al igual que ocurre en los documentos HTML, es posible incluir anotaciones en el código CSS encerrándolas entre los símbolos /* y */. Estas anotaciones pueden extenderse a lo largo de varias líneas, ya que a diferencia de otros lenguajes de programación, CSS únicamente admite este formato de anotaciones en bloque. Los navegadores web omiten completamente el contenido de estas anotaciones al mostrar la página web.
  
 Ejemplo:
 ```
